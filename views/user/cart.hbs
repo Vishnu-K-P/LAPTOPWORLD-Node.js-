@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>LAPTOP WORLD</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description"
+        content="Urdan Minimal eCommerce Bootstrap 5 Template is a stunning eCommerce website template that is the best choice for any online store.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="canonical" href="https://htmldemo.hasthemes.com/urdan/index.html" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Urdan - Minimal eCommerce HTML Template" />
+    <meta property="og:url" content="https://htmldemo.hasthemes.com/urdan/index.html" />
+    <meta property="og:site_name" content="Urdan - Minimal eCommerce HTML Template" />
+    <!-- For the og:image content, replace the # with a link of an image -->
+    <meta property="og:image" content="#" />
+    <meta property="og:description"
+        content="Urdan Minimal eCommerce Bootstrap 5 Template is a stunning eCommerce website template that is the best choice for any online store." />
+    <!-- Add site Favicon -->
+    <link rel="icon" href="assets/images/favicon/cropped-favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="assets/images/favicon/cropped-favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="assets/images/favicon/cropped-favicon-180x180.png" />
+    <meta name="msapplication-TileImage" content="assets/images/favicon/cropped-favicon-270x270.png" />
+
+  
+    <link rel="stylesheet" href="/User/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="/User/css/vendor/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" href="/User/css/vendor/themify-icons.css" />
+    <link rel="stylesheet" href="/User/css/vendor/font-awesome.min.css" />
+    <link rel="stylesheet" href="/User/css/plugins/animate.css" />
+    <link rel="stylesheet" href="/User/css/plugins/aos.css" />
+    <link rel="stylesheet" href="/User/css/plugins/magnific-popup.css" />
+    <link rel="stylesheet" href="/User/css/plugins/swiper.min.css" />
+    <link rel="stylesheet" href="/User/css/plugins/jquery-ui.css" />
+    <link rel="stylesheet" href="/User/css/plugins/nice-select.css" />
+    <link rel="stylesheet" href="/User/css/plugins/select2.min.css" />
+    <link rel="stylesheet" href="/User/css/plugins/easyzoom.css" />
+    <link rel="stylesheet" href="/User/css/plugins/slinky.css" />
+    <link rel="stylesheet" href="/User/css/style.css" />
+     <link rel="stylesheet" href="/stylesheets/style5.css" />
+
+
+<style>
+    .breadcrumb-area:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: -25px;
+    margin: 0 auto;
+    width: 342px;
+    height: 342px;
+    border-radius: 0%;
+    background-color: #dd000000;
+}
+</style>
+</head>
+
+
+
+
+<body>
+   <div class="main-wrapper main-wrapper-2">
+      <header class="header-area header-responsive-padding header-height-1"
+            style="min-height: 70px; ">
+        
+            <div class="header-bottom sticky-bar bg-light text-white " style="min-height: 130px;">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-2 col-md-6 col-6">
+                            <div class="logo">
+                                <a href="/login-register"><img src="/User/images/logo/looo-removebg-preview.png"
+                                        alt="logo" style="height:70px;"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 d-none d-lg-block text-color-orange">
+                            <div class="main-menu text-center ">
+                                <nav>
+                                    <ul>
+                                        <li><a href="/" style="color:orange">HOME</a>
+
+                                        </li>
+
+
+
+                                        <li><a href=""style="color:orange"> SHOP BY &nbsp; CATEGORY</a>
+
+                                          <ul class="sub-menu-style">
+                                                {{#each category}}
+                                                <li><a href="/categoryhome/{{this._id}}"> {{this.category}}</a></li>
+                                                {{/each}}
+                                            </ul>
+
+                                        </li>
+ <li><a href="/allproducts"style="color:orange">ALL PRODUCTS</a>
+
+                                        </li>
+                                         <li><a href="/"style="color:orange">NEW ARRIVALS</a>
+
+                                        </li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-6 col-6 ms-0">
+                            <div class="header-action-wrap ms-0">
+                                <div class="header-action-style header-search-1 ms-0">
+                                    <!--<a class="search-toggle" href="#">
+                                       <!-- <i class="pe-7s-search s-open"></i>
+                                        <i class="pe-7s-close s-close"></i>
+                                    </a>-->
+                                   <form action="/search/?search=''/" class="d-flex ">
+                                    <!--<input placeholder="Search products…" type="text"  value="{{key}}" >
+                                            <button type="submit" class="button-search"> <i class="pe-7s-search"></i></button>-->
+        <input type="search"  class="form-control  ms-0 me-0 " name="search" placeholder="Search" value="{{key}}" aria-label="Search"style="color:orange;border-color:orange;width:200%;margin-left:-50px">
+          <button type="submit"style="border-color:orange;"><i class="pe-7s-search"></i></button>
+      </form>
+                                </div>
+                                <div class="header-action-style d-flex gap-3 dropdown ms-2">
+
+                                    {{#if user}}
+
+
+
+                                    <a title="Login Register" href="/profile"><i class="pe-7s-user"style="font-size: 2em;color:orange;"></i></a>
+                                    {{else}}
+                                    <a title="Login Register" href="/login"><i class="pe-7s-user" style="font-size: 2em;color:orange"></i></a>
+
+                                </div>
+
+                                {{/if}}
+
+
+
+
+                                <div class="header-action-style ms-3">
+                                    <a title="Wishlist" href="/wishlist" ><i class="pe-7s-like" style="font-size: 2em;color:orange;"></i></a>
+                                </div>
+                                <div class="header-action-style header-action-cart">
+                                    <a class="cart-active" href="/cart"><i class="pe-7s-shopbag"style="font-size: 2em;color:orange"></i>
+                                        {{#if user}}
+                                        <span class="product-count bg-black" id="cart-count">{{cartcount}}</span>
+                                    </a>
+                                    {{else}}
+                                    <span class="product-count " id="cart-count"></span>
+                                    {{/if}}
+                                </div>
+                                <div class="header-action-style d-block d-lg-none ms-5">
+                                    <a class="mobile-menu-active-button" href="/cart"><i class="pe-7s-menu"></i></a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- mini cart start -->
+        <div class="sidebar-cart-active">
+            <div class="sidebar-cart-all">
+                <a class="cart-close" href=""><i class="pe-7s-close"></i></a>
+                <div class="cart-content">
+                    <h3>Shopping Cart</h3>
+                    <ul>
+                        {{#each list}}
+                        <li>
+                            <div class="cart-img">
+                                <a href="#"><img src="/Admin/images/{{this.image.[0]}}" alt=""></a>
+                            </div>
+                            <div class="cart-title">
+                                <h4><a href="#"></a></h4>
+                                <span> 1 × $49.00 </span>
+                            </div>
+                            <div class="cart-delete">
+                                <a href="#">×</a>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                    {{!-- <div class="cart-total">
+                        <h4>Subtotal: <span>$170.00</span></h4>
+                    </div> --}}
+                    <div class="cart-btn btn-hover">
+                        <a class="theme-color" href="/cart">View cart</a>
+                    </div>
+                    {{!-- <div class="checkout-btn btn-hover">
+                        <a class="theme-color" href="/checkout">Checkout</a>
+                    </div> <br> --}}
+                    <div class="checkout-btn btn-hover">
+                        <a class="theme-color" href="/wishlist">Wishlist</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+                <img src="assets/images/banner/breadcrumb-1.png" alt="">
+            </div>
+            <div class="breadcrumb-img-2">
+                <img src="assets/images/banner/breadcrumb-2.png" alt="">
+            </div>
+        </div>
+        <div class="cart-area pt-100 pb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <form>
+                            <div class="cart-table-content">
+                                <div class="table-content table-responsive">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th class="width-thumbnail">Product</th>
+                                                <th class="width-name">Product Name</th>
+                                                <th class="width-price"> Price</th>
+                                                <th class="width-quantity">Quantity</th>
+                                                <th class="width-subtotal">Subtotal</th>
+                                                <th class="width-remove">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{#each products}}
+                                            <tr>
+                                                {{!-- {{#each product}} --}}
+                                                <td class="product-thumbnail">
+                                                    <a href="product-details.html"><img
+                                                            src="/Admin/images/{{this.product.image.[0]}}" alt=""></a>
+                                                </td>
+                                                <td class="product-name">
+                                                    <h5><a href="product-details.html">{{this.product.name}}</a></h5>
+                                                </td>
+                                                <td class="product-cart-price"><span
+                                                        class="amount">₹{{this.product.price}}</span>
+                                                    {{!-- {{/each}} --}}
+
+                                                </td>
+                                                <td class="cart-quality">
+                                                    {{!-- <div class="product-quality"> --}}
+
+                                                        {{!-- <input class="cart-plus-minus-box input-text qty text"
+                                                            onclick="changeQuantity('{{this._id}}','{{this.product._id}},-1);
+                                                            changeQuantity('{{this._id}}','{{this.product._id}}',1)"
+                                                            name="qtybutton" value=" {{this.quantity}}"> --}}
+
+                                                        <button class="cart-item-count mr-3 "
+                                                            onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user._id}}',-1)">-</button>
+                                                        {{!-- <p>{{../user._id}}</p> --}}
+
+                                                        <span id="{{this.product._id}}">{{this.quantity}}</span>
+
+
+                                                        <button class="cart-item-count ml-3"
+                                                            onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user._id}}',1)">+</button>
+
+
+                                                </td>
+                                                <td class="product-total"><span
+                                                        id="a{{this.product._id}}">{{this.subTotal}}</span></td>
+
+                                                <td class="product-remove"><a class="btn"
+                                                        onclick="deleteItem('{{this._id}}','{{this.product._id}}')"><i
+                                                            class=" ti-trash "></i></a>
+                                                </td>
+
+                                            </tr>
+                                            {{/each}}
+                                            {{!-- {{#for 0 10 2}} --}}
+                                            {{!-- {{/for}} --}}
+
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="cart-shiping-update-wrapper">
+                                        <div class="cart-shiping-update btn-hover">
+                                            <a href="/">Continue Shopping</a>
+                                        </div>
+                                        <div class="cart-clear-wrap">
+                                           
+                                            <div class="cart-clear btn-hover">
+                                                <a href="#" onclick="clearCart('{{this._id}}')">Clear Cart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    
+                    <center>
+                    <div class="col-lg-4 col-md-12 col-12">
+                        <div class="grand-total-wrap">
+                            <div class="grand-total-content">
+                               
+                                
+                                <div class="grand-total">
+                                    <h4>Total <span id="total">₹{{totalValue}}</span></h4>
+                                </div>
+                            </div>
+                            <div class="grand-total-btn btn-hover">
+                                <a class="btn theme-color" href="/checkout">Proceed to checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <footer class="footer-area">
+            <div class="bg-gray-2">
+                <div class="container">
+                    <div class="footer-top pt-80 pb-35">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                                <div class="footer-widget footer-about mb-40">
+                                    {{!-- <div class="footer-logo">
+                                        <a href="index.html"><img src="/User/images/logo/looo.jpeg" alt="logo"></a>
+                                    </div> --}}
+                                  
+                                    <div class="payment-img">
+                                        <a href="#"><img src="/user/images/icon-img/payment.png" alt="logo"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                                <div class="footer-widget footer-widget-margin-1 footer-list mb-40">
+                                    <h3 class="footer-title">Information</h3>
+                                    <ul>
+                                        <li><a href="about-us.html">About Us</a></li>
+                                        <li><a href="#">Delivery Information</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Terms & Conditions</a></li>
+                                        <li><a href="#">Customer Service</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                                <div class="footer-widget footer-list mb-40">
+                                    <h3 class="footer-title">My Accound</h3>
+                                    <ul>
+                                        <li><a href="my-account.html">My Account</a></li>
+                                        <li><a href="#">Order History</a></li>
+                                        <li><a href="wishlist.html">Wish List</a></li>
+                                        <li><a href="#">Newsletter</a></li>
+                                        <li><a href="#">Order History</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                <div class="footer-widget footer-widget-margin-2 footer-address mb-40">
+                                    <h3 class="footer-title">Get in touch</h3>
+                                    <ul>
+                                        <li><span>Address: </span>Your address goes here </li>
+                                        <li><span>Telephone Enquiry:</span> (012) 345 6789</li>
+                                        <li><span>Email: </span>demo@example.com</li>
+                                    </ul>
+                                    <div class="open-time">
+                                        <p>Open : <span>8:00 AM</span> - Close : <span>18:00 PM</span></p>
+                                        <p>Saturday - Sunday : Close</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-3">
+                <div class="container">
+                    <div class="footer-bottom copyright text-center bg-gray-3">
+                        <p>Copyright ©2021 All rights reserved | Made with <i class="fa fa-heart"></i> by <a
+                                href="https://hasthemes.com/"> HasThemes</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Mobile Menu start -->
+        <div class="off-canvas-active">
+                <a class="off-canvas-close"><i class=" ti-close "></i></a>
+                <div class="off-canvas-wrap">
+                    <div class="welcome-text off-canvas-margin-padding">
+                        {{#if user}}
+                        <p>Welcome {{user.name}} !</p>
+                        {{else}}
+                        <p> Welcome Please Login! </p>
+                        {{/if}}
+                    </div>
+                    <div class="mobile-menu-wrap off-canvas-margin-padding-2">
+                        <div id="mobile-menu" class="slinky-mobile-menu text-left">
+                            <ul>
+                                <li>
+                                    <a href="/">HOME</a>
+
+                                <li>
+                                    <a href="#">SHOP</a>
+                                    <ul>
+                                        <li>
+                                            <a href="/allproducts">View All Products</a>
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#">SHOP BY CATEGORY </a>
+
+                                    <ul class="sub-menu-style">
+                                        {{#each category}}
+                                        <li><a href="/veg/{{this._id}}"> {{this.category}}</a></li>
+
+                                        {{/each}}
+                                    </ul>
+
+                                </li>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    <!-- All JS is here -->
+
+
+    <script src="/javascripts/ajax.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/User/js/vendor/modernizr-3.11.7.min.js"></script>
+    <script src="/User/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="/User/js/vendor/jquery-migrate-3.3.2.min.js"></script>
+    <script src="/User/js/vendor/popper.min.js"></script>
+    <script src="/User/js/vendor/bootstrap.min.js"></script>
+    <script src="/User/js/plugins/wow.js"></script>
+    <script src="/User/js/plugins/scrollup.js"></script>
+    <script src="/User/js/plugins/aos.js"></script>
+    <script src="/User/js/plugins/magnific-popup.js"></script>
+    <script src="/User/js/plugins/jquery.syotimer.min.js"></script>
+    <script src="/User/js/plugins/swiper.min.js"></script>
+    <script src="/User/js/plugins/imagesloaded.pkgd.min.js"></script>
+    <script src="/User/js/plugins/isotope.pkgd.min.js"></script>
+    <script src="/User/js/plugins/jquery-ui.js"></script>
+    <script src="/User/js/plugins/jquery-ui-touch-punch.js"></script>
+    <script src="/User/js/plugins/jquery.nice-select.min.js"></script>
+    <script src="/User/js/plugins/waypoints.min.js"></script>
+    <script src="/User/js/plugins/counterup.min.js"></script>
+    <script src="/User/js/plugins/select2.min.js"></script>
+    <script src="/User/js/plugins/easyzoom.js"></script>
+    <script src="/User/js/plugins/slinky.min.js"></script>
+    <script src="/User/js/plugins/ajax-mail.js"></script>
+    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/User/js/main.js"></script>
+
+
+</body>
+
+</html>

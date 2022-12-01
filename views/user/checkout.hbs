@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>LAPTOP WORLD</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description"
+        content="Urdan Minimal eCommerce Bootstrap 5 Template is a stunning eCommerce website template that is the best choice for any online store.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="canonical" href="https://htmldemo.hasthemes.com/urdan/index.html" />
+
+    <!-- Open Graph (OG) meta tags are snippets of code that control how URLs are displayed when shared on social media  -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Urdan - Minimal eCommerce HTML Template" />
+    <meta property="og:url" content="https://htmldemo.hasthemes.com/urdan/index.html" />
+    <meta property="og:site_name" content="Urdan - Minimal eCommerce HTML Template" />
+    <!-- For the og:image content, replace the # with a link of an image -->
+    <meta property="og:image" content="#" />
+    <meta property="og:description"
+        content="Urdan Minimal eCommerce Bootstrap 5 Template is a stunning eCommerce website template that is the best choice for any online store." />
+    <!-- Add site Favicon -->
+    <link rel="icon" href="assets/images/favicon/cropped-favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="assets/images/favicon/cropped-favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="assets/images/favicon/cropped-favicon-180x180.png" />
+    <meta name="msapplication-TileImage" content="assets/images/favicon/cropped-favicon-270x270.png" />
+
+    <!-- All CSS is here
+	============================================ -->
+    <link rel="stylesheet" href="/User/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="/User/css/vendor/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" href="/User/css/vendor/themify-icons.css" />
+    <link rel="stylesheet" href="/User/css/vendor/font-awesome.min.css" />
+    <link rel="stylesheet" href="/User/css/plugins/animate.css" />
+    <link rel="stylesheet" href="/User/css/plugins/aos.css" />
+    <link rel="stylesheet" href="/User/css/plugins/magnific-popup.css" />
+    <link rel="stylesheet" href="/User/css/plugins/swiper.min.css" />
+    <link rel="stylesheet" href="/User/css/plugins/jquery-ui.css" />
+    <link rel="stylesheet" href="/User/css/plugins/nice-select.css" />
+    <link rel="stylesheet" href="/User/css/plugins/select2.min.css" />
+    <link rel="stylesheet" href="/User/css/plugins/easyzoom.css" />
+    <link rel="stylesheet" href="/User/css/plugins/slinky.css" />
+    <link rel="stylesheet" href="/User/css/style.css" />
+</head>
+
+
+
+
+<body>
+  <header class="header-area header-responsive-padding header-height-1"
+            style="min-height: 70px; ">
+        
+            <div class="header-bottom sticky-bar bg-light text-white " style="min-height: 130px;">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-2 col-md-6 col-6">
+                            <div class="logo">
+                                <a href="/login-register"><img src="/User/images/logo/looo-removebg-preview.png"
+                                        alt="logo" style="height:70px;"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 d-none d-lg-block text-color-orange">
+                            <div class="main-menu text-center ">
+                                <nav>
+                                    <ul>
+                                        <li><a href="/" style="color:orange">HOME</a>
+
+                                        </li>
+
+
+
+                                        <li><a href=""style="color:orange"> SHOP BY &nbsp; CATEGORY</a>
+
+                                          <ul class="sub-menu-style">
+                                                {{#each category}}
+                                                <li><a href="/categoryhome/{{this._id}}"> {{this.category}}</a></li>
+                                                {{/each}}
+                                            </ul>
+
+                                        </li>
+ <li><a href="/allproducts"style="color:orange">ALL PRODUCTS</a>
+
+                                        </li>
+                                         <li><a href="/"style="color:orange">NEW ARRIVALS</a>
+
+                                        </li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-6 col-6 ms-0">
+                            <div class="header-action-wrap ms-0">
+                                <div class="header-action-style header-search-1 ms-0">
+                                    <!--<a class="search-toggle" href="#">
+                                       <!-- <i class="pe-7s-search s-open"></i>
+                                        <i class="pe-7s-close s-close"></i>
+                                    </a>-->
+                                   <form action="/search/?search=''/" class="d-flex ">
+                                    <!--<input placeholder="Search products…" type="text"  value="{{key}}" >
+                                            <button type="submit" class="button-search"> <i class="pe-7s-search"></i></button>-->
+        <input type="search"  class="form-control  ms-0 me-0 " name="search" placeholder="Search" value="{{key}}" aria-label="Search"style="color:orange;border-color:orange;width:200%;margin-left:-50px">
+          <button type="submit"style="border-color:orange;"><i class="pe-7s-search"></i></button>
+      </form>
+                                </div>
+                                <div class="header-action-style d-flex gap-3 dropdown ms-2">
+
+                                    {{#if user}}
+
+
+
+                                    <a title="Login Register" href="/profile"><i class="pe-7s-user"style="font-size: 2em;color:orange;"></i></a>
+                                    {{else}}
+                                    <a title="Login Register" href="/login"><i class="pe-7s-user" style="font-size: 2em;color:orange"></i></a>
+
+                                </div>
+
+                                {{/if}}
+
+
+
+
+                                <div class="header-action-style ms-3">
+                                    <a title="Wishlist" href="/wishlist" ><i class="pe-7s-like" style="font-size: 2em;color:orange;"></i></a>
+                                </div>
+                                <div class="header-action-style header-action-cart">
+                                    <a class="cart-active" href="/cart"><i class="pe-7s-shopbag"style="font-size: 2em;color:orange"></i>
+                                        {{#if user}}
+                                        <span class="product-count bg-black" id="cart-count">{{cartcount}}</span>
+                                    </a>
+                                    {{else}}
+                                    <span class="product-count " id="cart-count"></span>
+                                    {{/if}}
+                                </div>
+                                <div class="header-action-style d-block d-lg-none ms-5">
+                                    <a class="mobile-menu-active-button" href="/cart"><i class="pe-7s-menu"></i></a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+      <!--  <div class="breadcrumb-area bg-gray-4 breadcrumb-padding-1 bg-transparent" style="background-image: url(/User/images/banner/flat-lay-green-fruits-vegetables-frame\ \(1\).jpg);background-size: cover;">
+            <div class="container">
+                <div class="breadcrumb-content text-center ">
+                    <h2>Checkout </h2>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><i class="ti-angle-right"></i></li>
+                        <li>Checkout </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="breadcrumb-img-1">
+                <img src="assets/images/banner/breadcrumb-1.png" alt="">
+            </div>
+            <div class="breadcrumb-img-2">
+                <img src="assets/images/banner/breadcrumb-2.png" alt="">
+            </div>
+        </div>-->
+
+        <div class="checkout-main-area pb-100 pt-100 " >
+            <div class="container ">
+                <form method="" id="checkout-form">
+
+                    <div class="checkout-wrap pt-30 ">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="billing-info-wrap">
+                                    <h3 class="text-dark" style="font-weight: 600; font-size: 30px;">Delivery Address</h3>
+                                    <div class="row">
+                                        <div class="accordion" id="accordionPanelsStayOpenExample">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#panelsStayOpen-collapseOne"
+                                                        aria-expanded="true" aria-controls="panelsStayOpen-collapseOne "  aria-required="true">
+                                                        Existing Address
+                                                    </button>
+                                                </h2>
+                                                <div id="panelsStayOpen-collapseOne"
+                                                    class="accordion-collapse collapse show"
+                                                    aria-labelledby="panelsStayOpen-headingOne" >
+                                                    <div class="accordion-body" >
+
+
+                                                        {{#each address}}
+                                                        <div class="form-check">
+                                                            <label class="form-check-label" for="flexRadioDefault1"
+                                                                data-bs-toggle="collapse"> </label>
+                                                            <input class="form-check-input" type="radio"
+                                                                name="payment-address" required
+                                                                value="{{this._id}}" /><span
+                                                                class="text-dark"><strong>Address: {{inc
+                                                                    @index}}</strong> </span> <br>
+
+                                                            <span>
+
+                                                                {{this.name}} <br>
+                                                                {{this.number}} <br>
+                                                                {{this.address}}
+                                                                {{this.pincode}}
+                                                                {{this.state}}
+                                                                {{this.city}}
+
+                                                            </span>
+
+                                                        </div>
+                                                        {{/each}}
+                                                        {{!-- ........ --}}
+
+                                                                 <div class="form-check">
+                                                            <label class="form-check-label" for="flexRadioDefault1"
+                                                                data-bs-toggle="collapse"> </label>
+                                                            <input class="form-check-input" type="radio"
+                                                                name="payment-address" required
+                                                                value="" hidden/><span
+                                                                class="text-dark"><strong>
+                                                                    </strong> </span> <br>
+
+                                                        
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> <br> <br>
+                                            {{!-- {{#each address}}
+                                            <div class="form-check">
+                                                <label class="form-check-label" for="flexRadioDefault1"
+                                                    data-bs-toggle="collapse"> </label>
+                                                <input class="form-check-input" type="radio" name="payment-address"
+                                                    value="{{this._id}}" />
+
+                                                <span>
+                                                    Address-{{inc @index}}<br>
+                                                    {{this.name}} <br>
+                                                    {{this.number}} <br>
+
+                                                    {{this.address}}
+                                                    {{this.pincode}}
+                                                    {{this.state}}
+                                                    {{this.city}}
+                                                    {{this.number}}
+
+                                                </span>
+
+                                            </div>
+                                            {{/each}} --}}
+
+                                            <divclass="Place-order  text-center">
+                                                <a href="/addcheck-address" class="btn-sm btn-outline-dark mb-3"
+                                                    style="float:center; font-size: 15px; ">Add Address</a><br><br><br><br>
+                                        </div>
+
+                                        <input type="text" name="userId" value="{{user._id}}" hidden><br>
+
+                    <div>
+                  <h3 class="text-dark"style="font-weight: 600; font-size: 30px; ">Select Your Payment Method</h3> <br>
+
+            <div class="form-check" id="cod">
+                <input class="form-check-input" type="radio" name="payment-method" id="cod" value="COD" checked/>
+                <label class="form-check-label" for="flexRadioDefault1" style="font-size: 15px;"> Cash on Delivery </label>
+            </div>
+
+            <!-- Default checked radio -->
+            <div class="" id="online">
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="payment-method" id="RAZORPAY" value="RAZORPAY" 
+                     />
+                <label class="form-check-label" for="flexRadioDefault2" style="font-size: 15px;"> RazorPay </label>
+            </div>
+
+           <div class="form-check">
+                <input class="form-check-input" type="radio" name="payment-method" id="PAYPAL" value="PAYPAL"  />
+                <label class="form-check-label" for="flexRadioDefault2" style="font-size: 15px;"> PayPal </label>
+            </div>
+
+              </div>
+              
+
+                 <div class="form-check" id="wallet-div" hidden>
+                <input class="form-check-input" type="radio" name="payment-method" id="customCheck50" value="walletPay"  />
+                <label class="form-check-label" for="flexRadioDefault2" style="font-size: 15px;"> Use Wallet Balance </label>
+               </div><br>
+</div>
+                              
+
+
+  
+            </div>
+
+        </div>
+    </div>
+    
+
+    <div class="col-lg-5">
+        <div class="your-order-area">
+            {{!-- <h3>Select Your Payment Method</h3> <br>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="payment-method" id="COD" value="COD" checked/>
+                <label class="form-check-label" for="flexRadioDefault1"> Cash on Delivery</label>
+            </div>
+
+            <!-- Default checked radio -->
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="payment-method" id="RAZORPAY" value="RAZORPAY"
+                     />
+                <label class="form-check-label" for="flexRadioDefault2"> RazorPay </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="payment-method" id="PAYPAL" value="PAYPAL"  />
+                <label class="form-check-label" for="flexRadioDefault2"> PayPal </label>
+            </div>
+
+
+               <div class="form-check">
+                <input class="form-check-input" type="radio" name="payment-method" id="PAYPAL" value="PAYPAL"  />
+                <label class="form-check-label" for="flexRadioDefault2"> Use Wallet Balance </label>
+            </div><br> --}}
+
+             
+
+            <div class="col-lg-12 col-md-12 col-12 mt-4">
+                <div class="cart-calculate-discount-wrap mb-40">
+                    <h4 class="" style="font-size: 20px;">Coupon Discount </h6>
+
+                        {{!-- error --}}
+                        <p id="error" value="" style="color:red;"></p>
+
+
+                        <div class="calculate-discount-content">
+                            <p>Enter your coupon code if you have one.</p>
+
+                            <div class="input-style">
+                                <input type="text" id="couponName" placeholder="Coupon code" name="couponcode">
+                            </div>
+                            <div class="Place-order btn-hover text-center">
+                                <button  onclick="applyCoupon(event)" class="btn border border-success bg-orange " id="applybutton"  style="font-size: 15px;background-color:orange;"> <strong> Apply Coupon</strong></button>
+                                <button class="btn border border-success bg-orange " id="deletebutton" onclick="removeCoupon(event)" style="font-size: 15px;"
+                                    hidden="true"> <strong> Remove Coupon</strong>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        
+                </div>
+            </div>
+            {{#if user.wallet}}
+            <div class="col-lg-12 col-md-12 col-12 ">
+                <div class="cart-calculate-discount-wrap ">
+                    <h4 class="" style="font-size: 25px;">Wallet</h6>
+
+                <div class="form-check mt-3">
+                <input class="form-check-input" id="wallet1" type="radio" name="useWallet" id="" value="1" onclick="usewallet()"  />
+                <label class="form-check-label" for="flexRadioDefault2" style="font-size: 12px;"> Use now </label>
+            </div>
+
+             <div class="form-check">
+                <input class="form-check-input" id="wallet0" type="radio" name="useWallet" id="" onclick=" removeWallet()"  value="0"/>
+                <label class="form-check-label" for="flexRadioDefault2" style="font-size: 12px;">Use later </label>
+            </div><br>
+
+            <p class="text-success" style="font-size: medium;">Wallet Balance :₹<span id ="walletBalance">{{wallet.wallet}}</span></p>
+
+                       
+
+                        
+                </div>
+            </div>
+            {{/if}}
+            <h3 class="" style="font-size: 30px; font-weight: 600;">Your order</h3>
+            <div class="your-order-wrap gray-bg-4 ">
+                <div class="your-order-info-wrap">
+                     <div class="your-order-info">
+                                            <ul>
+                                                <li>Products <span>Subtotal</span></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="your-order-middle">
+                                            {{#each products}}
+                                            <ul>
+                                                <li class="text-success"> {{this.product.name}}<span>₹{{this.subTotal}}</span> X {{this.quantity}}</li>
+                                                    <span class="text-danger" style=" "> (M.R.P)₹ {{this.product.price}}</span></li>
+                                            </ul>
+                                            {{/each}}
+                                        </div>
+                                       
+               
+                    <div class="your-order-info order-total">
+                        <ul>
+
+                            <li>Products-total <span >₹{{total}}</span></li>
+                        </ul>
+                        {{!-- <div class="your-order-info order-subtotal">
+                            <ul>
+                                <li>Subtotal <span>{{totalAmount}}</span></li>
+                            </ul>
+                        </div> --}}
+                        <div class="your-order-info order-subtotal">
+                            <ul>
+                                <li>Discount Percentage <span id="percentage">0</span></li>
+                            </ul>
+                        </div>
+                        <div class="your-order-info order-subtotal">
+                            <ul>
+                                <li>Discount Amount <span id="discount">0</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="your-order-info order-total">
+                            <ul>
+                                <li>
+                                                              <i><p  id="error2" value="" style="color:orange; float:right;"></p></i></span>
+
+
+                                </li>
+                                <br>
+                                <br>
+                                                                             <input type="number"  name="payable" class="amount" id="payable"  value="" hidden>
+                                {{!-- <li class="text-danger" style="font-size: 30px;"> <strong>Total</strong> <span class="amount" id="payableAmount" style="font-size: 30px ; font-weight: 600;">₹{{total}}</span></li> --}}
+
+                                <li class="text-danger" style="font-size: 30px;"> <strong>Total</strong>₹ <span class="text-success" id="totall" style="font-size: 30px ; font-weight: 600;">{{total}}</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+       <div class="Place-order btn-hover text-center">
+                                            <button type="submit " class="btn  border border-success bg-orange " style="font-size: 20px;background-color:orange; "> <strong> Place Order</strong>  </button>
+                                        </div>
+
+        {{!-- <div class="customer-zone mb-20">
+            <p class="cart-page-title"><a class="checkout-click3" href="#">Click here for your Coupon !</a></p>
+            <div class="checkout-login-info3">
+                <form action="#">
+                    <input type="text" placeholder="Coupon code" id="couponName">
+                    <input type="submit" value="Apply Coupon">
+                </form>
+            </div> --}}
+            {{!--
+        </div> --}}
+
+        {{!-- <div class="col-lg-5"> --}}
+
+
+            {{!-- <div class="payment-method">
+                <div class="pay-top sin-payment">
+                    <input id="Bank_transfer" class="radio" type="radio" value="IMPS transfer" checked="checked"
+                        name="payment-method">
+                    <label for="payment_method_1"> Direct Bank Transfer </label>
+                    <div class="payment-box payment_method_bacs">
+                        <p>Make your payment directly into our bank account. Please use your Order ID as the payment
+                            reference.</p>
+                    </div>
+                </div>
+                <div class="pay-top sin-payment">
+                    <input id="payment-method-2" class="radio" type="radio" value="" name="payment-method">
+                    <label for="payment-method-2">Check payments</label>
+                    <div class="payment-box payment_method_bacs">
+                        <p>Make your payment directly into our bank account. Please use your Order ID as the payment
+                            reference.</p>
+                    </div>
+                </div>
+                <div class="pay-top sin-payment">
+                    <input id="COD" class="radio" type="radio" value="" name="payment_method">
+                    <label for="payment-method-3">Cash on delivery </label>
+                    <div class="payment-box payment_method_bacs">
+                        <p>Make your payment directly into our bank account. Please use your Order ID as the payment
+                            reference.</p>
+                    </div>
+                </div>
+                <div class="pay-top sin-payment sin-payment-3">
+                    <input id="Paypal" class="radio" type="radio" value="" name="payment-method">
+                    <label for="payment-method-4">PayPal <img alt="" src="assets/images/icon-img/payment.png"><a
+                            href="#">What is PayPal?</a></label>
+                    <div class="payment-box payment_method_bacs">
+                        <p>Make your payment directly into our bank account. Please use your Order ID as the payment
+                            reference.</p>
+                    </div>
+                </div>
+            </div> --}}
+
+
+            <!-- Default radio -->
+            {{!-- <div class="form-check">
+                <input class="form-check-input" type="radio" name="payment-method" id="COD" value="COD" />
+                <label class="form-check-label" for="flexRadioDefault1"> Cash on Delivery</label>
+            </div>
+
+            <!-- Default checked radio -->
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="payment-method" id="RAZORPAY" value="RAZORPAY"
+                    checked />
+                <label class="form-check-label" for="flexRadioDefault2"> RazorPay </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="payment-method" id="PAYPAL" value="PAYPAL" checked />
+                <label class="form-check-label" for="flexRadioDefault2"> PayPal </label>
+            </div> --}}
+
+
+        </div>
+
+        {{!-- <div class="Place-order btn-hover">
+            <button type="submit " class="btn"> Place Order </button>
+        </div> --}}
+    </div>
+    </div>
+    </div>
+    </div>
+    </form>
+    </div>
+    </div>
+    <footer class="footer-area">
+        <div class="bg-gray-2">
+            <div class="container">
+                <div class="footer-top pt-80 pb-35">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="footer-widget footer-about mb-40">
+                                {{!-- <div class="footer-logo">
+                                    <a href="index.html"><img src="/User/images/logo/looo.jpeg" alt="logo"></a>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, cons adipi elit, sed do eiusmod tempor incididunt ut
+                                    aliqua.</p> --}}
+                                <div class="payment-img">
+                                    <a href="#"><img src="/user/images/icon-img/payment.png" alt="logo"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="footer-widget footer-widget-margin-1 footer-list mb-40">
+                                <h3 class="footer-title">Information</h3>
+                                <ul>
+                                    <li><a href="about-us.html">About Us</a></li>
+                                    <li><a href="#">Delivery Information</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                    <li><a href="#">Customer Service</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                            <div class="footer-widget footer-list mb-40">
+                                <h3 class="footer-title">My Accound</h3>
+                                <ul>
+                                    <li><a href="my-account.html">My Account</a></li>
+                                    <li><a href="#">Order History</a></li>
+                                    <li><a href="wishlist.html">Wish List</a></li>
+                                    <li><a href="#">Newsletter</a></li>
+                                    <li><a href="#">Order History</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div class="footer-widget footer-widget-margin-2 footer-address mb-40">
+                                <h3 class="footer-title">Get in touch</h3>
+                                <ul>
+                                    <li><span>Address: </span>Your address goes here </li>
+                                    <li><span>Telephone Enquiry:</span> (012) 345 6789</li>
+                                    <li><span>Email: </span>demo@example.com</li>
+                                </ul>
+                                <div class="open-time">
+                                    <p>Open : <span>8:00 AM</span> - Close : <span>18:00 PM</span></p>
+                                    <p>Saturday - Sunday : Close</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-3">
+            <div class="container">
+                <div class="footer-bottom copyright text-center bg-gray-3">
+                    <p>Copyright ©2021 All rights reserved | Made with <i class="fa fa-heart"></i> by <a
+                            href="https://hasthemes.com/"> HasThemes</a>.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Mobile Menu start -->
+    <div class="off-canvas-active">
+                <a class="off-canvas-close"><i class=" ti-close "></i></a>
+                <div class="off-canvas-wrap">
+                    <div class="welcome-text off-canvas-margin-padding">
+                        {{#if user}}
+                        <p>Welcome {{user.name}} !</p>
+                        {{else}}
+                        <p> Welcome Please Login! </p>
+                        {{/if}}
+                    </div>
+                    <div class="mobile-menu-wrap off-canvas-margin-padding-2">
+                        <div id="mobile-menu" class="slinky-mobile-menu text-left">
+                            <ul>
+                                <li>
+                                    <a href="/">HOME</a>
+
+                                <li>
+                                    <a href="#">SHOP</a>
+                                    <ul>
+                                        <li>
+                                            <a href="/allproducts">View All Products</a>
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#">SHOP BY CATEGORY </a>
+
+                                    <ul class="sub-menu-style">
+                                        {{#each category}}
+                                        <li><a href="/veg/{{this._id}}"> {{this.category}}</a></li>
+
+                                        {{/each}}
+                                    </ul>
+
+                                </li>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    <!-- All JS is here -->
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/javascripts/ajax.js"></script>
+    <script src="/User/js/vendor/modernizr-3.11.7.min.js"></script>
+    <script src="/User/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="/User/js/vendor/jquery-migrate-3.3.2.min.js"></script>
+    <script src="/User/js/vendor/popper.min.js"></script>
+    <script src="/User/js/vendor/bootstrap.min.js"></script>
+    <script src="/User/js/plugins/wow.js"></script>
+    <script src="/User/js/plugins/scrollup.js"></script>
+    <script src="/User/js/plugins/aos.js"></script>
+    <script src="/User/js/plugins/magnific-popup.js"></script>
+    <script src="/User/js/plugins/jquery.syotimer.min.js"></script>
+    <script src="/User/js/plugins/swiper.min.js"></script>
+    <script src="/User/js/plugins/imagesloaded.pkgd.min.js"></script>
+    <script src="/User/js/plugins/isotope.pkgd.min.js"></script>
+    <script src="/User/js/plugins/jquery-ui.js"></script>
+    <script src="/User/js/plugins/jquery-ui-touch-punch.js"></script>
+    <script src="/User/js/plugins/jquery.nice-select.min.js"></script>
+    <script src="/User/js/plugins/waypoints.min.js"></script>
+    <script src="/User/js/plugins/counterup.min.js"></script>
+    <script src="/User/js/plugins/select2.min.js"></script>
+    <script src="/User/js/plugins/easyzoom.js"></script>
+    <script src="/User/js/plugins/slinky.min.js"></script>
+    <script src="/User/js/plugins/ajax-mail.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <!-- Main JS -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="/User/js/main.js"></script>
+</body>
+
+</html>
